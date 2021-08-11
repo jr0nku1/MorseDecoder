@@ -27,7 +27,7 @@ LiquidCrystal lcd(8,9,4,5,6,7);
 #define    DEMOD_TH_H    3
 #define    DEMOD_TH_L    0
 
-#define    MRS_TH_SL     20     /* LONG count threshold (TIM_INT*MRS_TH_SL = 100ms) */
+#define    MRS_TH_SL     30     /* LONG count threshold (TIM_INT*MRS_TH_SL = 100ms) */
 
 #define    LCD_ROW       16     /* LCD row      */
 
@@ -233,8 +233,8 @@ void setup()
 //  analogReference(DEFAULT);
   adc_max_n = 20;    /* default cicle of ADC (3)     */
   adc_amax = 0;     /* for debug                */
-//  demod_th = 80;   /* default demod threshold  */
-  demod_th = 40;   /* default demod threshold  */
+  demod_th = 100;   /* default demod threshold  */
+//  demod_th = 40;   /* default demod threshold  */
   demod_cnt = DEMOD_TH_L;
   demod_mark = false;
   tbuff_top = 0;    /* time buffer top */
